@@ -6,7 +6,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <div className="w-full flex items-center flex-col ">
       <Header />
-      <div className="w-[90%]">{children}</div>
+      <div className="sm:w-[90%] w-[95%] sm">{children}</div>
       <Footer />
     </div>
   );

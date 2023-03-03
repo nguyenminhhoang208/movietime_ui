@@ -9,18 +9,15 @@ const RowCredits = ({ movieId }) => {
   let maxCredits = 7;
 
   useEffect(() => {
-    async function getCredits() {
+    (async () => {
       await axios
         .get(
           `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${KEY}&language=en-US`
         )
         .then((response) => {
           setCredits(response.data.cast);
-          console.log(credits);
         });
-    }
-    getCredits();
-    return;
+    })();
   }, [movieId]);
   return (
     <div className="mb-10">
@@ -55,7 +52,7 @@ const RowCredits = ({ movieId }) => {
               </div>
             );
           }
-          return undefined
+          return undefined;
         })}
       </div>
     </div>

@@ -19,7 +19,6 @@ const RowListMovie = ({
 }) => {
   const [listMovie, setListMovie] = useState([]);
 
-
   const trailerMovieContext = useContext(TrailerMovieContext);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ const RowListMovie = ({
 
   return (
     <>
-      {listMovie.length !== 0 ? (
+      {listMovie?.length !== 0 ? (
         <>
           {scroll ? (
             <div className="mb-3 relative group/row">
@@ -52,17 +51,18 @@ const RowListMovie = ({
                   {title}
                 </h1>
               ) : (
-                <></>
+                undefined
               )}
               <ul
                 id={"row_" + rowID}
-                className="w-full flex flex-wrap justify-evenly"
+                className="w-full "
+                // className="w-full flex flex-wrap justify-evenly"
               >
                 {listMovie.map((movie) => {
                   return (
                     <li
                       key={movie?.id}
-                      className="lg:w-[24%]  md:w-[32%] sm:w-[48%] w-[70%] h-[150px] mb-5  inline-block overflow-hidden rounded-md cursor-pointer relative group/link_movie  "
+                      className="lg:w-[24%]  md:w-[32%] sm:w-[48%] w-[70%]  m1-3 mr-3  inline-block overflow-hidden rounded-md cursor-pointer relative group/link_movie  "
                     >
                       <Link
                         to={"/movie/" + movie.id}
@@ -115,7 +115,7 @@ const RowListMovie = ({
                 onClick={() => {
                   beforeSlide(rowID);
                 }}
-                className="group-hover/row:block  absolute top-[50%] text-4xl hover:text-5xl hidden translate-y-[-20%] text-mainColor left-0 translate-x-[-50%] z-10 cursor-pointer"
+                className="   sm:group-hover/row:block  absolute top-[50%] text-4xl hover:text-5xl hidden translate-y-[-20%] text-mainColor left-0 translate-x-[-50%] z-10 cursor-pointer"
               />
               <ul
                 id={"row_" + rowID}
@@ -172,7 +172,7 @@ const RowListMovie = ({
                 onClick={() => {
                   nextSlide(rowID);
                 }}
-                className="group-hover/row:block  absolute top-[50%] text-4xl hover:text-5xl hidden translate-y-[-20%] text-mainColor right-0 translate-x-[50%] z-10 cursor-pointer"
+                className="   sm:group-hover/row:block  absolute top-[50%] text-4xl hover:text-5xl hidden translate-y-[-20%] text-mainColor right-0 translate-x-[50%] z-10 cursor-pointer"
               />
             </div>
           )}
