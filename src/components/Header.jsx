@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full   bg-black  flex justify-center items-center ">
+    <div className="w-full   bg-black  flex justify-center items-center">
       <div className="w-[90%] h-[68px] flex justify-between  items-center">
         <div className="px-5  py-1 rounded-md ml-1 inline-block bg-mainColor text-xl cursor-pointer hover:scale-105  xl:hidden">
           <FaBars className="mt-[-6px] inline-block" />
