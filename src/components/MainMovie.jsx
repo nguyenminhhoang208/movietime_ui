@@ -48,7 +48,7 @@ const MainMovie = ({ title, movie }) => {
   })();
 
   return (
-    <div className="w-full  mb-10 mt-6  ">
+    <div className="w-full mb-10 mt-6 ">
       {title ? (
         <h1 className="text-mainColor text-xl font-bold mb-4 ">{title}</h1>
       ) : undefined}
