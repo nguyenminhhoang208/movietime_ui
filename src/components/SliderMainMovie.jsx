@@ -40,9 +40,9 @@ const SliderMainMovie = ({ title, apiURL }) => {
         <h1 className="text-mainColor text-xl font-bold mb-4 ">{title}</h1>
       ) : undefined}
 
-      {movies.length !== 0 ? (
-        <MainMovie movie={movies[indexMovie]} />
-      ) : undefined}
+        {movies.length !== 0 ? (
+          <MainMovie  movie={movies[indexMovie]}/>
+        ) : undefined}
       {movies?.length !== 0 ? (
         <div className="flex justify-center items-center lg:mt-[-20px] lg:mb-8 md:mt-[-15px] md:mb-6 sm:mt-[-10px] sm:mb-6 mb-6 mt-[-20px] ">
           {movies.map((movie, index) => {
