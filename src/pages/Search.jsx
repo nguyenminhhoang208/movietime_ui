@@ -16,7 +16,7 @@ const Search = () => {
         <h1 className=" text-2xl uppercase inline-block text-mainColor">
           Từ khóa: {searchValue}{" "}
         </h1>
-        <ul>
+        <ul className="hidden md:inline-block float-right">
           {options.map((option, index) => {
             if (option?.searchOptions) {
               return (

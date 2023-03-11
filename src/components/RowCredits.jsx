@@ -31,23 +31,24 @@ const RowCredits = ({ movieId }) => {
             return (
               <div
                 key={credit?.name}
-                className="mx-2 first:ml-0 last:mr-0 p-1 relative border border-[#fea10054] hover:border-mainColor inline-block rounded-lg group/credit overflow-hidden"
+                className="mx-2 w-[22%]  first:ml-0 last:mr-0 p-1 relative border border-[#fea10054] hover:border-mainColor inline-block rounded-lg group/credit overflow-hidden"
               >
                 <img
-                  className="transition duration-[0.75s] rounded-lg group-hover/credit:scale-[1.05]"
+                
+                  className=" transition duration-[0.75s] rounded-lg group-hover/credit:scale-[1.05]"
                   src={
                     credit.profile_path
                       ? `https://image.tmdb.org/t/p/original/${credit?.profile_path}`
                       : noimage_doc
                   }
                   alt={credit?.name}
-                  width={credit.profile_path ? "165px" : "178px"}
+                  // width={credit.profile_path ? "165px" : "178px"}
                 />
                 <div className="absolute bottom-0 left-0 p-1 bg-[#000000ba] w-full h-[0] opacity-0  group-hover/credit:h-[23%] group-hover/credit:opacity-100 transtion duration-[0.75s] ">
-                  <h1 className="font-bold text-sm text-mainColor">
+                  <h1 className="font-bold text-[8px] text-mainColor">
                     {credit?.name}
                   </h1>
-                  <p className=" text-xs text-[#b9b9b9]">{credit?.character}</p>
+                  <p className=" text-[6px] text-[#b9b9b9]">{credit?.character}</p>
                 </div>
               </div>
             );

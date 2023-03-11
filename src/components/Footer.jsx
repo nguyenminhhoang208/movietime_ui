@@ -4,7 +4,7 @@ import logoMovieTime from '~/assets/img/logo_MovieTime.png'
 
 const Footer = () => {
   return (
-    <div className="w-full h-[260px] bg-black flex justify-center">
+    <div className="w-full bg-black flex justify-center">
       <div className="w-[90%] py-5 flex justify-between">
         <div className="lg:w-[15%] sm:w-[35%] w-[45%]  h-full ">
           <Link to='/'><img src={logoMovieTime} alt='logo'/></Link>
